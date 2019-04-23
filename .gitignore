@@ -1,22 +1,3 @@
-Skip to content
-
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
-
-@shiweigang789
-376
-10,949 1,240 alibaba/flutter-go
- Code  Issues 24  Pull requests 3  Projects 1  Wiki  Insights
-flutter-go/.gitignore
-@DeckeDeng DeckeDeng flutter project switch ios or android by androidstudio
-a8b8cef 15 days ago
-@DeckeDeng @Nealyang
-80 lines (72 sloc)  1.33 KB
-
 # Miscellaneous
 *.class
 *.log
@@ -96,15 +77,3 @@ a8b8cef 15 days ago
 !**/ios/**/default.pbxuser
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
