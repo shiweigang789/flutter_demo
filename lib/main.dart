@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/widgets/elements/Frame/Box/OverflowBox/demo.dart';
+import 'package:flutter_app/widgets/elements/Frame/Box/FittedBox/demo.dart';
 
 const int ThemeColor = 0xFFC91B3A;
 
@@ -29,53 +29,56 @@ class MyApp extends StatelessWidget {
 //          body: DefaultTextField()
 
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Text("宽高都小于最小限制"),
-            Container(
-              width: 100.0,
-              height: 100.0,
-              color: Color(0xfff8bbd0),
-              child: OverflowBoxDefault(
-                curmaxHeight: 150.0,
-                curmaxWidth: 150.0,
-                //宽高都小于最小限制
-                curHeight: 50.0,
-                curWidth: 50.0,
-                curalignment: Alignment.bottomLeft,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                FittedBoxDefault(
+                  //设置child写入布局期间分配空间
+                  curfit: BoxFit.contain,
+                  dec: 'contain',
+                ),
+                FittedBoxDefault(
+                  curfit: BoxFit.fill,
+                  dec: 'fill',
+                ),
+                FittedBoxDefault(
+                  curfit: BoxFit.cover,
+                  dec: 'cover',
+                ),
+              ],
             ),
-            SizedBox(height: 20),
-            Text("在限制之内"),
-            Container(
-              width: 100.0,
-              height: 100.0,
-              color: Color(0xfff8bbd0),
-              child: OverflowBoxDefault(
-                curmaxHeight: 150.0,
-                curmaxWidth: 150.0,
-                curHeight: 80.0,
-                curWidth: 80.0,
-                curalignment: Alignment.topRight,
-              ),
-            ),
-            SizedBox(height: 20),
             SizedBox(
-              height: 50,
-              child: Text("宽高都大于最大限制"),
+              height: 20.0,
             ),
-            Container(
-              width: 100.0,
-              height: 100.0,
-              color: Color(0xfff8bbd0),
-              child: OverflowBoxDefault(
-                curmaxHeight: 150.0,
-                curmaxWidth: 150.0,
-                //宽高大于最大限制
-                curHeight: 200.0,
-                curWidth: 200.0,
-                curalignment: Alignment.center,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                FittedBoxDefault(
+                  curfit: BoxFit.fitHeight,
+                  dec: 'fitHeight',
+                ),
+                FittedBoxDefault(
+                  curfit: BoxFit.fitWidth,
+                  dec: 'fitWidth',
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                FittedBoxDefault(
+                  curfit: BoxFit.none,
+                  dec: 'none',
+                ),
+                FittedBoxDefault(
+                  curfit: BoxFit.scaleDown,
+                  dec: 'scaleDown',
+                ),
+              ],
             ),
           ],
         ),
