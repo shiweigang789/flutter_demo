@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/widgets/elements/Frame/Box/FittedBox/demo.dart';
+import 'package:flutter_app/widgets/themes/Cupertino/CupertinoScrollbar/demo.dart';
 
 const int ThemeColor = 0xFFC91B3A;
 
@@ -28,59 +28,8 @@ class MyApp extends StatelessWidget {
       home: new Scaffold(
 //          body: DefaultTextField()
 
-        body: Column(
-          children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                FittedBoxDefault(
-                  //设置child写入布局期间分配空间
-                  curfit: BoxFit.contain,
-                  dec: 'contain',
-                ),
-                FittedBoxDefault(
-                  curfit: BoxFit.fill,
-                  dec: 'fill',
-                ),
-                FittedBoxDefault(
-                  curfit: BoxFit.cover,
-                  dec: 'cover',
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                FittedBoxDefault(
-                  curfit: BoxFit.fitHeight,
-                  dec: 'fitHeight',
-                ),
-                FittedBoxDefault(
-                  curfit: BoxFit.fitWidth,
-                  dec: 'fitWidth',
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                FittedBoxDefault(
-                  curfit: BoxFit.none,
-                  dec: 'none',
-                ),
-                FittedBoxDefault(
-                  curfit: BoxFit.scaleDown,
-                  dec: 'scaleDown',
-                ),
-              ],
-            ),
-          ],
+        body: Container(
+          child: NoCupertinoScrollbarDemo(),
         ),
       ),
 //      onGenerateRoute: Application.router.generator,
